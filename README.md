@@ -82,4 +82,4 @@ pip install -r requirements.txt
 
 **5.** Go to ` http://127.0.0.1:8000/` and enjoy the application.
 
-
+[![Watch the video](https://raw.githubusercontent.com/arpit456jain/Payment-Gateway-In-Django/master/static/img/preview.png)](https://youtu.be/qpj8_mU-kE4)
