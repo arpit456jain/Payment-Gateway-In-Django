@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container text-center py-5">
+    
+   <h1 class="mb-5">Make Payment</h1>
+   <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" class="btn-subscribe" value="Pay 500"></input>
+    </form>
+  </div>
+
+  {% if payment %}
+
+<div class="text-center mx-auto">
+<form action="/success/" method="POST">
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key= "{{api_key}}"
+    data-amount="{{payment.amount}}" 
+    data-currency="INR"
+    data-order_id="{{payment.id}}"
+    data-buttontext="Pay with Razorpay"
+    data-name="pay"
+    data-description="Test Transaction"
+    data-theme.color="#F37254"
+></script>
+<input type="hidden" custom="Hidden Element" name="hidden">
+</form>
+
+{% endif %}
+{% endblock body %}

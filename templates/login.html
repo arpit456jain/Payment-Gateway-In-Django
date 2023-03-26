@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container col-lg-6 col-12">
+    <h1>Login</h1>
+    <form action="" class="contact-form" method="post">
+        {% csrf_token %}
+      <div class="contact-input-container">
+        <input type="text" class="input" placeholder="User Name" name="username"/>
+      </div>
+
+      <div class="contact-input-container">
+        <input type="password" class="input" placeholder="password" name="password"/> 
+      </div>      
+      <div class="btn-box">
+        <input type="submit" class="btn-subscribe" value="Login" />
+      </div>
+      <h3 class="mt-2">Not a member ? <a href="/signup/" class="">Sign up</a></h3>
+    </form>
+  </div>
+{% endblock body %}
